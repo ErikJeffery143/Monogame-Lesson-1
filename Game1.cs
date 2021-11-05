@@ -8,9 +8,10 @@ namespace Monogame_Lesson_1
     {
         private GraphicsDeviceManager _graphics;
         private SpriteBatch _spriteBatch;
-        Texture2D windowsTexture;
-        Texture2D dinoTexture;
+        Texture2D backgroundTexture;
+        Texture2D miceTexture;
         Texture2D johnnyTexture;
+        Texture2D angyTexture;
         public Game1()
         {
             _graphics = new GraphicsDeviceManager(this);
@@ -22,8 +23,8 @@ namespace Monogame_Lesson_1
         {
             // TODO: Add your initialization logic here
 
-            _graphics.PreferredBackBufferWidth = 800;
-            _graphics.PreferredBackBufferHeight = 600;
+            _graphics.PreferredBackBufferWidth = 1200;
+            _graphics.PreferredBackBufferHeight = 800;
             _graphics.ApplyChanges();
 
             this.Window.Title = "Creative Freedom";
@@ -35,8 +36,10 @@ namespace Monogame_Lesson_1
             _spriteBatch = new SpriteBatch(GraphicsDevice);
 
             // TODO: use this.Content to load your game content here
-            dinoTexture = Content.Load<Texture2D>("dino");
-            johnnyTexture = Content.Load<Texture2D>("Johnnyb001");
+            miceTexture = Content.Load<Texture2D>("Mice 2");
+            johnnyTexture = Content.Load<Texture2D>("Canada");
+            backgroundTexture = Content.Load<Texture2D>("Classroom Background");
+            angyTexture = Content.Load<Texture2D>("Angry Sign");
         }
 
         protected override void Update(GameTime gameTime)
@@ -55,10 +58,10 @@ namespace Monogame_Lesson_1
 
             // TODO: Add your drawing code here
             _spriteBatch.Begin();
-                        
-            _spriteBatch.Draw(dinoTexture, new Vector2(10, 40), Color.White);
+            _spriteBatch.Draw(backgroundTexture, new Vector2(0, 0), Color.White);
+            _spriteBatch.Draw(miceTexture, new Vector2(800, 200), Color.White);
             _spriteBatch.Draw(johnnyTexture, new Vector2(300, 10), Color.White);
-
+            _spriteBatch.Draw(angyTexture, new Vector2(830, 180), Color.White);
             _spriteBatch.End();
 
 
