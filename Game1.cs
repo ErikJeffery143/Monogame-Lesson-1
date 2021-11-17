@@ -62,9 +62,10 @@ namespace Monogame_Lesson_1
             _spriteBatch.Draw(miceTexture, new Vector2(800, 200), Color.White);
             _spriteBatch.Draw(johnnyTexture, new Vector2(300, 10), Color.White);
             _spriteBatch.Draw(angyTexture, new Vector2(830, 180), Color.White);
+
+
+
             _spriteBatch.End();
-
-
 
             base.Draw(gameTime);
         }
